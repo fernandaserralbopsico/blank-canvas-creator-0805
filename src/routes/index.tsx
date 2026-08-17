@@ -281,7 +281,7 @@ function About() {
                 <path d="M9 12l2 2 4-4" />
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
               </svg>
-              CRP 06/123456
+              CRP 06/209356
             </span>
             <span className="rounded-full border border-border bg-background px-4 py-2 text-sm font-medium text-foreground">
               Atendimento online
@@ -619,7 +619,7 @@ function Contact() {
             WhatsApp (11) 97188-0020
           </a>
           <a
-            href="mailto:contato@fernandaserralbo.com.br"
+            href="mailto:fernanda.serralbo@hotmail.com"
             className="inline-flex items-center justify-center gap-2 rounded-full border border-primary-foreground/40 px-7 py-3.5 text-base font-medium text-primary-foreground transition-colors hover:bg-primary-foreground/10"
           >
             Enviar e-mail
@@ -685,13 +685,13 @@ function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:contato@fernandaserralbo.com.br"
+                  href="mailto:fernanda.serralbo@hotmail.com"
                   className="transition-colors hover:text-primary"
                 >
-                  contato@fernandaserralbo.com.br
+                  fernanda.serralbo@hotmail.com
                 </a>
               </li>
-              <li>CRP 06/123456</li>
+              <li>CRP 06/209356</li>
               <li>Atendimento online para todo o Brasil</li>
             </ul>
           </div>
@@ -699,7 +699,7 @@ function Footer() {
 
         <div className="mt-12 border-t border-background/15 pt-6 text-center text-xs text-background/55">
           © {new Date().getFullYear()} Dra. Fernanda Serralbo • Psicóloga Clínica
-          • CRP 06/123456. Este site não oferece emergências psiquiátricas — em
+          • CRP 06/209356. Este site não oferece emergências psiquiátricas — em
           casos de urgência, ligue 188 (CVV).
         </div>
       </div>
