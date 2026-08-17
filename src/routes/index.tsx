@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import heroImg from "../assets/hero.jpg";
 import portraitAsset from "../assets/fernanda.jpg.asset.json";
 const portraitImg = portraitAsset.url;
+import logoAsset from "../assets/logo-fernanda.png.asset.json";
+const logoImg = logoAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -61,12 +63,13 @@ function SiteHeader() {
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-8">
         <a href="#inicio" className="flex items-center gap-2.5">
-          <span
-            className="grid h-9 w-9 place-items-center rounded-full bg-primary text-primary-foreground font-display text-sm font-semibold"
-            aria-hidden="true"
-          >
-            FS
-          </span>
+          <img
+            src={logoImg}
+            alt="Logotipo de Fernanda Serralbo, psicóloga"
+            width={160}
+            height={160}
+            className="h-11 w-11 rounded-full object-cover"
+          />
           <span className="font-display text-lg font-medium tracking-tight text-foreground">
             Dra. Fernanda Serralbo
           </span>
@@ -638,9 +641,14 @@ function Footer() {
         <div className="grid gap-10 md:grid-cols-3">
           <div>
             <div className="flex items-center gap-2.5">
-              <span className="grid h-9 w-9 place-items-center rounded-full bg-primary text-primary-foreground font-display text-sm font-semibold">
-                FS
-              </span>
+              <img
+                src={logoImg}
+                alt="Logotipo de Fernanda Serralbo, psicóloga"
+                width={160}
+                height={160}
+                loading="lazy"
+                className="h-10 w-10 rounded-full object-cover"
+              />
               <span className="font-display text-lg font-medium">
                 Dra. Fernanda Serralbo
               </span>
