@@ -253,9 +253,9 @@ function About() {
           <div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground">
             <p>
               Sou psicóloga clínica, formada em Psicologia, com especialização em
-              Terapia Cognitivo-Comportamental. Dedico-me a oferecer um espaço de
-              escuta qualificada, acolhimento e respeito à singularidade de cada
-              pessoa.
+              Terapia Cognitivo-Comportamental pelo Hospital Israelita Albert
+              Einstein. Dedico-me a oferecer um espaço de escuta qualificada,
+              acolhimento e respeito à singularidade de cada pessoa.
             </p>
             <p>
               Acredito que o processo terapêutico é uma construção conjunta,
@@ -308,9 +308,30 @@ type Specialty = {
 
 const SPECIALTIES: Specialty[] = [
   {
-    title: "Psicoterapia Individual",
+    title: "Ansiedade",
     description:
-      "Processo terapêutico personalizado para explorar emoções, pensamentos e padrões, promovendo autoconhecimento e qualidade de vida.",
+      "A ansiedade se manifesta em preocupação excessiva, tensão corporal, medos paralisantes e pensamentos catastróficos que atrapalham o dia a dia. Na TCC, aprendemos a identificar os gatilhos ansiosos, questionar pensamentos distorcidos e desenvolver estratégias práticas de regulação emocional — para que você recupere calma, foco e controle sobre a própria vida.",
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="28"
+        height="28"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z" />
+        <path d="M12 8v4M12 16h.01" />
+      </svg>
+    ),
+  },
+  {
+    title: "Autoestima e Confiança",
+    description:
+      "A baixa autoestima alimenta o autocriticismo, a comparação constante e a sensação de nunca ser suficiente. Juntas, vamos reconhecer seus valores, reescrever a narrativa interna crítica e construir uma relação mais gentil e confiante com você mesmo — baseada em evidências reais da sua história, capacidades e conquistas.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -328,9 +349,9 @@ const SPECIALTIES: Specialty[] = [
     ),
   },
   {
-    title: "Terapia Cognitivo-Comportamental",
+    title: "TDAH",
     description:
-      "Abordagem estruturada e baseada em evidências que identifica e transforma padrões de pensamento e comportamento disfuncionais.",
+      "O Transtorno de Déficit de Atenção e Hiperatividade afeta foco, organização e regulação emocional, gerando frustração e sobrecarga. O acompanhamento clínico combina psicoeducação, técnicas de organização e rotinas, gestão de tempo e regulação de impulsos — estratégias práticas para transformar o caos em estrutura e potencializar suas qualidades.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -343,28 +364,7 @@ const SPECIALTIES: Specialty[] = [
         strokeLinecap="round"
         strokeLinejoin="round"
       >
-        <circle cx="12" cy="12" r="3" />
-        <path d="M12 1v6m0 10v6m11-11h-6M7 12H1m15.5-7.5l-4.24 4.24M9.74 14.26l-4.24 4.24m0-15l4.24 4.24m4.52 4.52l4.24 4.24" />
-      </svg>
-    ),
-  },
-  {
-    title: "Psicologia Clínica",
-    description:
-      "Avaliação e acompanhamento de questões emocionais como ansiedade, depressão, autoestima e desafios da vida adulta e da adolescência.",
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="28"
-        height="28"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M3 12h18M3 6h18M3 18h18" />
+        <path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2.1v1.2h6V16.8c0-.8.4-1.6 1-2.1A7 7 0 0 0 12 2z" />
       </svg>
     ),
   },
@@ -376,14 +376,15 @@ function Specialties() {
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-medium uppercase tracking-widest text-primary">
-            Especialidades
+            Foco de Atendimento
           </p>
           <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
-            Áreas de atendimento
+            Como posso te ajudar
           </h2>
           <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-            Atendimento exclusivamente online, voltado para adultos e
-            adolescentes, com abordagens baseadas em evidências científicas.
+            Atendimento exclusivamente online para adultos e adolescentes, com a
+            Terapia Cognitivo-Comportamental — uma abordagem estruturada, ativa e
+            baseada em evidências científicas.
           </p>
         </div>
 
@@ -404,6 +405,96 @@ function Specialties() {
               </p>
             </div>
           ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+const TCC_POINTS = [
+  {
+    title: "Identifica padrões",
+    desc: "Reconhece os pensamentos automáticos, crenças e comportamentos que mantêm o sofrimento emocional.",
+  },
+  {
+    title: "Promove mudança real",
+    desc: "Traz estratégias concretas e exercícios práticos para aplicar no dia a dia — não só conversa.",
+  },
+  {
+    title: "Baseada em evidências",
+    desc: "Uma das abordagens mais estudadas cientificamente, recomendada por diretrizes internacionais.",
+  },
+  {
+    title: "Foco em resultados",
+    desc: "Metas claras e acompanhamento contínuo: você percebe a evolução ao longo do processo.",
+  },
+];
+
+function TccSection() {
+  return (
+    <section className="bg-secondary/40 py-24">
+      <div className="mx-auto max-w-6xl px-5 sm:px-8">
+        <div className="grid gap-12 md:grid-cols-2 md:gap-16">
+          <div>
+            <p className="text-sm font-medium uppercase tracking-widest text-primary">
+              A Terapia Cognitivo-Comportamental
+            </p>
+            <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+              Entenda como a TCC transforma vidas
+            </h2>
+            <p className="mt-6 text-base leading-relaxed text-muted-foreground">
+              A Terapia Cognitivo-Comportamental parte de uma ideia simples e
+              poderosa: não são as situações que causam nosso sofrimento, mas a
+              forma como interpretamos e damos significado a elas. Pensamentos,
+              emoções e comportamentos formam um ciclo — e quando compreendemos
+              esse ciclo, ganhamos a chave para transformá-lo.
+            </p>
+            <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+              Com a TCC você aprende a observar os pensamentos automáticos que
+              disparam a ansiedade, a reconhecer o autocriticismo que mina a
+              autoestima e a substituir hábitos paralisantes por ações que te
+              aproximam de uma vida com mais sentido. É um processo ativo,
+              colaborativo e focado no presente — com técnicas práticas que você
+              aplica entre as sessões e que constroem resultados visíveis.
+            </p>
+            <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+              Minha especialização no Hospital Israelita Albert Einstein me
+              trouxe o aporte técnico e científico para conduzir esse processo
+              com segurança, ética e cuidado individualizado.
+            </p>
+          </div>
+
+          <div className="grid gap-5 sm:grid-cols-2">
+            {TCC_POINTS.map((p) => (
+              <div
+                key={p.title}
+                className="rounded-2xl border border-border bg-card p-6 shadow-sm"
+              >
+                <div className="grid h-10 w-10 place-items-center rounded-xl bg-primary/10 text-primary">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M9 12l2 2 4-4" />
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  </svg>
+                </div>
+                <h3 className="mt-4 font-display text-lg font-semibold text-foreground">
+                  {p.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  {p.desc}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
@@ -747,6 +838,7 @@ function Index() {
         <Hero />
         <About />
         <Specialties />
+        <TccSection />
         <HowItWorks />
         <Faq />
         <Contact />
