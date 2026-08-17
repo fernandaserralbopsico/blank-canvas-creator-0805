@@ -250,9 +250,9 @@ function About() {
           <div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground">
             <p>
               Sou psicóloga clínica, formada em Psicologia, com especialização em
-              Terapia Cognitivo-Comportamental. Há mais de uma década dedico-me a
-              oferecer um espaço de escuta qualificada, acolhimento e respeito à
-              singularidade de cada pessoa.
+              Terapia Cognitivo-Comportamental. Dedico-me a oferecer um espaço de
+              escuta qualificada, acolhimento e respeito à singularidade de cada
+              pessoa.
             </p>
             <p>
               Acredito que o processo terapêutico é uma construção conjunta,
