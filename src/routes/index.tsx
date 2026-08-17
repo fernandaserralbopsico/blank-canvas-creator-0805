@@ -838,6 +838,7 @@ function Index() {
         <Hero />
         <About />
         <Specialties />
+        <TccSection />
         <HowItWorks />
         <Faq />
         <Contact />
