@@ -2,6 +2,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import heroImg from "../assets/hero.jpg";
 import portraitAsset from "../assets/fernanda.jpg.asset.json";
+import photo1Asset from "../assets/fernanda-1.jpg.asset.json";
+import photo2Asset from "../assets/fernanda-2.jpg.asset.json";
+import photo3Asset from "../assets/fernanda-3.jpg.asset.json";
 const portraitImg = portraitAsset.url;
 import logoAsset from "../assets/logo-fernanda.png.asset.json";
 const logoImg = logoAsset.url;
@@ -226,6 +229,65 @@ function Hero() {
 }
 
 function About() {
+  return AboutInner();
+}
+
+const GALLERY = [
+  {
+    src: photo1Asset.url,
+    alt: "Dra. Fernanda Serralbo sorrindo em seu consultório com um livro nas mãos",
+  },
+  {
+    src: photo2Asset.url,
+    alt: "Dra. Fernanda Serralbo lendo material de estudo em Terapia Cognitivo-Comportamental",
+  },
+  {
+    src: photo3Asset.url,
+    alt: "Dra. Fernanda Serralbo sentada com livro de Terapia Cognitivo-Comportamental",
+  },
+];
+
+function Gallery() {
+  return (
+    <section className="bg-background py-24">
+      <div className="mx-auto max-w-6xl px-5 sm:px-8">
+        <div className="max-w-2xl">
+          <p className="text-sm font-medium uppercase tracking-widest text-primary">
+            Um pouco do meu dia a dia
+          </p>
+          <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+            Estudo contínuo, cuidado e presença
+          </h2>
+          <p className="mt-5 text-base leading-relaxed text-muted-foreground">
+            Acredito em uma prática clínica baseada em evidências e em formação
+            constante — para que cada sessão seja um espaço seguro, humano e
+            realmente transformador.
+          </p>
+        </div>
+
+        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {GALLERY.map((photo, i) => (
+            <figure
+              key={photo.src}
+              className={`group overflow-hidden rounded-3xl border border-border bg-secondary/40 shadow-sm ${
+                i === 1 ? "sm:mt-8 lg:mt-10" : ""
+              }`}
+            >
+              <img
+                src={photo.src}
+                alt={photo.alt}
+                loading="lazy"
+                className="h-80 w-full object-cover transition-transform duration-700 group-hover:scale-105 sm:h-96"
+              />
+            </figure>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function AboutInner() {
   return (
     <section id="sobre" className="section-anchor bg-secondary/40 py-24">
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 sm:px-8 md:grid-cols-[auto_1fr] md:gap-16">
