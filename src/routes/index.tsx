@@ -533,6 +533,13 @@ function TccSection() {
               </div>
             ))}
           </div>
+
+          <SectionPhoto
+            src={photo2Asset.url}
+            alt="Fernanda Serralbo lendo material de estudo em Terapia Cognitivo-Comportamental"
+            className="md:col-span-2"
+          />
+
         </div>
       </div>
     </section>
