@@ -437,6 +437,13 @@ function Specialties() {
             </div>
           ))}
         </div>
+
+        <SectionPhoto
+          src={photo1Asset.url}
+          alt="Fernanda Serralbo sorrindo em seu consultório com um livro nas mãos"
+          className="mt-14"
+        />
+
       </div>
     </section>
   );
