@@ -581,7 +581,14 @@ function HowItWorks() {
           </p>
         </div>
 
+        <SectionPhoto
+          src={photo3Asset.url}
+          alt="Fernanda Serralbo sentada com livro de Terapia Cognitivo-Comportamental"
+          className="mt-12"
+        />
+
         <div className="mt-14 grid gap-8 md:grid-cols-3">
+
           {STEPS.map((step) => (
             <div key={step.num} className="relative">
               <div className="font-display text-5xl font-bold text-primary/25">
