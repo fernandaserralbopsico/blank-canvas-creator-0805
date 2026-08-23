@@ -12,13 +12,13 @@ const logoImg = logoAsset.url;
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Dra. Fernanda Serralbo | Psicóloga Clínica" },
+      { title: "Fernanda Serralbo | Psicóloga Clínica" },
       {
         name: "description",
         content:
-          "Psicologia clínica com acolhimento e ética. Psicoterapia individual online para adultos e adolescentes com a Dra. Fernanda Serralbo. Agende sua consulta.",
+          "Psicologia clínica com acolhimento e ética. Psicoterapia individual online para adultos e adolescentes com a Fernanda Serralbo. Agende sua consulta.",
       },
-      { property: "og:title", content: "Dra. Fernanda Serralbo | Psicóloga Clínica" },
+      { property: "og:title", content: "Fernanda Serralbo | Psicóloga Clínica" },
       {
         property: "og:description",
         content:
@@ -35,7 +35,7 @@ export const Route = createFileRoute("/")({
 
 const WHATSAPP_NUMBER = "5511971880020";
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-  "Olá, Dra. Fernanda! Gostaria de agendar uma consulta.",
+  "Olá, Fernanda! Gostaria de agendar uma consulta.",
 )}`;
 
 const NAV_ITEMS = [
@@ -74,7 +74,7 @@ function SiteHeader() {
             className="h-11 w-11 rounded-full object-cover"
           />
           <span className="font-display text-lg font-medium tracking-tight text-foreground">
-            Dra. Fernanda Serralbo
+            Fernanda Serralbo
           </span>
         </a>
 
@@ -232,60 +232,29 @@ function About() {
   return AboutInner();
 }
 
-const GALLERY = [
-  {
-    src: photo1Asset.url,
-    alt: "Dra. Fernanda Serralbo sorrindo em seu consultório com um livro nas mãos",
-  },
-  {
-    src: photo2Asset.url,
-    alt: "Dra. Fernanda Serralbo lendo material de estudo em Terapia Cognitivo-Comportamental",
-  },
-  {
-    src: photo3Asset.url,
-    alt: "Dra. Fernanda Serralbo sentada com livro de Terapia Cognitivo-Comportamental",
-  },
-];
-
-function Gallery() {
+function SectionPhoto({
+  src,
+  alt,
+  className = "",
+}: {
+  src: string;
+  alt: string;
+  className?: string;
+}) {
   return (
-    <section className="bg-background py-24">
-      <div className="mx-auto max-w-6xl px-5 sm:px-8">
-        <div className="max-w-2xl">
-          <p className="text-sm font-medium uppercase tracking-widest text-primary">
-            Um pouco do meu dia a dia
-          </p>
-          <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
-            Estudo contínuo, cuidado e presença
-          </h2>
-          <p className="mt-5 text-base leading-relaxed text-muted-foreground">
-            Acredito em uma prática clínica baseada em evidências e em formação
-            constante — para que cada sessão seja um espaço seguro, humano e
-            realmente transformador.
-          </p>
-        </div>
-
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {GALLERY.map((photo, i) => (
-            <figure
-              key={photo.src}
-              className={`group overflow-hidden rounded-3xl border border-border bg-secondary/40 shadow-sm ${
-                i === 1 ? "sm:mt-8 lg:mt-10" : ""
-              }`}
-            >
-              <img
-                src={photo.src}
-                alt={photo.alt}
-                loading="lazy"
-                className="h-80 w-full object-cover transition-transform duration-700 group-hover:scale-105 sm:h-96"
-              />
-            </figure>
-          ))}
-        </div>
-      </div>
-    </section>
+    <figure
+      className={`group overflow-hidden rounded-3xl border border-border bg-secondary/40 shadow-sm ${className}`}
+    >
+      <img
+        src={src}
+        alt={alt}
+        loading="lazy"
+        className="h-72 w-full object-cover transition-transform duration-700 group-hover:scale-105 sm:h-96"
+      />
+    </figure>
   );
 }
+
 
 function AboutInner() {
   return (
@@ -296,7 +265,7 @@ function AboutInner() {
             <div className="absolute -inset-4 rounded-full bg-accent/50 blur-2xl" aria-hidden="true" />
             <img
               src={portraitImg}
-              alt="Dra. Fernanda Serralbo, psicóloga clínica"
+              alt="Fernanda Serralbo, psicóloga clínica"
               width={900}
               height={900}
               loading="lazy"
@@ -310,7 +279,7 @@ function AboutInner() {
             Sobre Mim
           </p>
           <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
-            Dra. Fernanda Serralbo
+            Fernanda Serralbo
           </h2>
           <div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground">
             <p>
@@ -372,7 +341,7 @@ const SPECIALTIES: Specialty[] = [
   {
     title: "Ansiedade",
     description:
-      "A ansiedade se manifesta em preocupação excessiva, tensão corporal, medos paralisantes e pensamentos catastróficos que atrapalham o dia a dia. Na TCC, aprendemos a identificar os gatilhos ansiosos, questionar pensamentos distorcidos e desenvolver estratégias práticas de regulação emocional — para que você recupere calma, foco e controle sobre a própria vida.",
+      "A ansiedade se manifesta em preocupação excessiva, tensão corporal, medos paralisantes e pensamentos catastróficos que atrapalham o dia a dia. Na TCC, aprendemos a identificar os gatilhos ansiosos, questionar pensamentos distorcidos e desenvolver estratégias práticas de regulação emocional, para que você recupere calma, foco e controle sobre a própria vida.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -393,7 +362,7 @@ const SPECIALTIES: Specialty[] = [
   {
     title: "Autoestima e Confiança",
     description:
-      "A baixa autoestima alimenta o autocriticismo, a comparação constante e a sensação de nunca ser suficiente. Juntas, vamos reconhecer seus valores, reescrever a narrativa interna crítica e construir uma relação mais gentil e confiante com você mesmo — baseada em evidências reais da sua história, capacidades e conquistas.",
+      "A baixa autoestima alimenta o autocriticismo, a comparação constante e a sensação de nunca ser suficiente. Juntas, vamos reconhecer seus valores, reescrever a narrativa interna crítica e construir uma relação mais gentil e confiante com você mesmo, baseada em evidências reais da sua história, capacidades e conquistas.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -413,7 +382,7 @@ const SPECIALTIES: Specialty[] = [
   {
     title: "TDAH",
     description:
-      "O Transtorno de Déficit de Atenção e Hiperatividade afeta foco, organização e regulação emocional, gerando frustração e sobrecarga. O acompanhamento clínico combina psicoeducação, técnicas de organização e rotinas, gestão de tempo e regulação de impulsos — estratégias práticas para transformar o caos em estrutura e potencializar suas qualidades.",
+      "O Transtorno de Déficit de Atenção e Hiperatividade afeta foco, organização e regulação emocional, gerando frustração e sobrecarga. O acompanhamento clínico combina psicoeducação, técnicas de organização e rotinas, gestão de tempo e regulação de impulsos, estratégias práticas para transformar o caos em estrutura e potencializar suas qualidades.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -445,7 +414,7 @@ function Specialties() {
           </h2>
           <p className="mt-4 text-base leading-relaxed text-muted-foreground">
             Atendimento exclusivamente online para adultos e adolescentes, com a
-            Terapia Cognitivo-Comportamental — uma abordagem estruturada, ativa e
+            Terapia Cognitivo-Comportamental, uma abordagem estruturada, ativa e
             baseada em evidências científicas.
           </p>
         </div>
@@ -468,6 +437,13 @@ function Specialties() {
             </div>
           ))}
         </div>
+
+        <SectionPhoto
+          src={photo1Asset.url}
+          alt="Fernanda Serralbo sorrindo em seu consultório com um livro nas mãos"
+          className="mt-14"
+        />
+
       </div>
     </section>
   );
@@ -480,7 +456,7 @@ const TCC_POINTS = [
   },
   {
     title: "Promove mudança real",
-    desc: "Traz estratégias concretas e exercícios práticos para aplicar no dia a dia — não só conversa.",
+    desc: "Traz estratégias concretas e exercícios práticos para aplicar no dia a dia, não só conversa.",
   },
   {
     title: "Baseada em evidências",
@@ -508,7 +484,7 @@ function TccSection() {
               A Terapia Cognitivo-Comportamental parte de uma ideia simples e
               poderosa: não são as situações que causam nosso sofrimento, mas a
               forma como interpretamos e damos significado a elas. Pensamentos,
-              emoções e comportamentos formam um ciclo — e quando compreendemos
+              emoções e comportamentos formam um ciclo, e quando compreendemos
               esse ciclo, ganhamos a chave para transformá-lo.
             </p>
             <p className="mt-4 text-base leading-relaxed text-muted-foreground">
@@ -516,7 +492,7 @@ function TccSection() {
               disparam a ansiedade, a reconhecer o autocriticismo que mina a
               autoestima e a substituir hábitos paralisantes por ações que te
               aproximam de uma vida com mais sentido. É um processo ativo,
-              colaborativo e focado no presente — com técnicas práticas que você
+              colaborativo e focado no presente, com técnicas práticas que você
               aplica entre as sessões e que constroem resultados visíveis.
             </p>
             <p className="mt-4 text-base leading-relaxed text-muted-foreground">
@@ -557,6 +533,13 @@ function TccSection() {
               </div>
             ))}
           </div>
+
+          <SectionPhoto
+            src={photo2Asset.url}
+            alt="Fernanda Serralbo lendo material de estudo em Terapia Cognitivo-Comportamental"
+            className="md:col-span-2"
+          />
+
         </div>
       </div>
     </section>
@@ -598,7 +581,14 @@ function HowItWorks() {
           </p>
         </div>
 
+        <SectionPhoto
+          src={photo3Asset.url}
+          alt="Fernanda Serralbo sentada com livro de Terapia Cognitivo-Comportamental"
+          className="mt-12"
+        />
+
         <div className="mt-14 grid gap-8 md:grid-cols-3">
+
           {STEPS.map((step) => (
             <div key={step.num} className="relative">
               <div className="font-display text-5xl font-bold text-primary/25">
@@ -803,7 +793,7 @@ function Footer() {
                 className="h-10 w-10 rounded-full object-cover"
               />
               <span className="font-display text-lg font-medium">
-                Dra. Fernanda Serralbo
+                Fernanda Serralbo
               </span>
             </div>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-background/70">
@@ -860,8 +850,8 @@ function Footer() {
         </div>
 
         <div className="mt-12 border-t border-background/15 pt-6 text-center text-xs text-background/55">
-          © {new Date().getFullYear()} Dra. Fernanda Serralbo • Psicóloga Clínica
-          • CRP 06/209356. Este site não oferece emergências psiquiátricas — em
+          © {new Date().getFullYear()} Fernanda Serralbo • Psicóloga Clínica
+          • CRP 06/209356. Este site não oferece emergências psiquiátricas, em
           casos de urgência, ligue 188 (CVV).
         </div>
       </div>
@@ -899,7 +889,8 @@ function Index() {
       <main>
         <Hero />
         <About />
-        <Gallery />
+
+
 
         <Specialties />
         <TccSection />
