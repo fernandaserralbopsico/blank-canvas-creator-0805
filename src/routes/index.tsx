@@ -868,7 +868,8 @@ function Index() {
       <main>
         <Hero />
         <About />
-        <Gallery />
+
+
 
         <Specialties />
         <TccSection />
