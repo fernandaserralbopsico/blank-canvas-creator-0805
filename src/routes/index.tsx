@@ -493,10 +493,10 @@ function TccSection() {
         <div className="grid gap-12 md:grid-cols-2 md:gap-16">
           <div>
             <p className="text-sm font-medium uppercase tracking-widest text-primary">
-              A Terapia Cognitivo-Comportamental
+              O que é a TCC
             </p>
             <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
-              Entenda como a TCC transforma vidas
+              A terapia que conecta pensamentos, emoções e ações
             </h2>
             <p className="mt-6 text-base leading-relaxed text-muted-foreground">
               A Terapia Cognitivo-Comportamental parte de uma ideia simples e
