@@ -1,11 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import heroImg from "../assets/hero.jpg";
-import portraitAsset from "../assets/fernanda.jpg.asset.json";
-import photo1Asset from "../assets/fernanda-1.jpg.asset.json";
-import photo2Asset from "../assets/fernanda-2.jpg.asset.json";
-import photo3Asset from "../assets/fernanda-3.jpg.asset.json";
-const portraitImg = portraitAsset.url;
+import headshotAsset from "../assets/fernanda-headshot.jpg.asset.json";
+const portraitImg = headshotAsset.url;
 import logoAsset from "../assets/logo-fernanda.png.asset.json";
 const logoImg = logoAsset.url;
 
