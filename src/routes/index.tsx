@@ -520,7 +520,14 @@ function TccSection() {
             </p>
           </div>
 
-          <div className="grid gap-5 sm:grid-cols-2">
+          <div className="md:pt-2">
+            <p className="text-sm font-medium uppercase tracking-widest text-primary">
+              Como pode te ajudar
+            </p>
+            <h3 className="mt-2 font-display text-2xl font-semibold tracking-tight text-foreground">
+              Benefícios práticos para o seu dia a dia
+            </h3>
+            <div className="mt-6 grid gap-5 sm:grid-cols-2">
             {TCC_POINTS.map((p) => (
               <div
                 key={p.title}
@@ -542,14 +549,15 @@ function TccSection() {
                     <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                   </svg>
                 </div>
-                <h3 className="mt-4 font-display text-lg font-semibold text-foreground">
+                <h4 className="mt-4 font-display text-lg font-semibold text-foreground">
                   {p.title}
-                </h3>
+                </h4>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                   {p.desc}
                 </p>
               </div>
             ))}
+            </div>
           </div>
 
           <SectionPhoto
