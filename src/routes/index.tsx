@@ -1,11 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import heroImg from "../assets/hero.jpg";
-import portraitAsset from "../assets/fernanda.jpg.asset.json";
+import headshotAsset from "../assets/fernanda-headshot.jpg.asset.json";
 import photo1Asset from "../assets/fernanda-1.jpg.asset.json";
 import photo2Asset from "../assets/fernanda-2.jpg.asset.json";
 import photo3Asset from "../assets/fernanda-3.jpg.asset.json";
-const portraitImg = portraitAsset.url;
+const portraitImg = headshotAsset.url;
 import logoAsset from "../assets/logo-fernanda.png.asset.json";
 const logoImg = logoAsset.url;
 
@@ -283,22 +283,40 @@ function AboutInner() {
           </h2>
           <div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground">
             <p>
-              Sou psicóloga clínica, formada em Psicologia, com especialização em
-              Terapia Cognitivo-Comportamental pelo Hospital Israelita Albert
-              Einstein. Dedico-me a oferecer um espaço de escuta qualificada,
-              acolhimento e respeito à singularidade de cada pessoa.
+              Sou Fernanda Serralbo, psicóloga clínica formada em Psicologia, com
+              especialização em Terapia Cognitivo-Comportamental pelo Hospital
+              Israelita Albert Einstein. Acredito que todo ser humano carrega uma
+              história singular, e meu compromisso é oferecer um espaço de escuta
+              qualificada, acolhimento e respeito à sua individualidade.
             </p>
             <p>
-              Acredito que o processo terapêutico é uma construção conjunta,
-              baseada em confiança e vínculo. Meu trabalho busca promover
-              autoconhecimento, autonomia e bem-estar emocional, sempre pautado
-              pela ética e pelo rigor científico.
+              O processo terapêutico é uma construção conjunta, baseada em
+              confiança e vínculo. Meu trabalho busca promover autoconhecimento,
+              autonomia e bem-estar emocional, sempre pautado pela ética e pelo
+              rigor científico.
             </p>
             <p>
               Atendo exclusivamente de forma online, garantindo praticidade,
               sigilo e a possibilidade de realizar terapia no conforto do seu
               espaço.
             </p>
+
+            <div className="mt-2 rounded-2xl border border-border bg-background/60 p-6">
+              <h3 className="font-display text-lg font-semibold text-foreground">
+                Como meu trabalho pode te ajudar
+              </h3>
+              <p className="mt-3 text-base leading-relaxed text-muted-foreground">
+                Minha atuação vai muito além de ouvir: juntos, vamos compreender
+                os padrões que sustentam o sofrimento emocional e desenvolver
+                ferramentas práticas para o seu dia a dia. Você ganha um espaço
+                seguro para se expressar sem julgamentos, aprende a identificar e
+                questionar pensamentos que te paralisam, fortalece a
+                autoconfiança e constrói estratégias concretas para lidar com
+                ansiedade, autoestima e TDAH. O objetivo é que você saia de cada
+                sessão com mais clareza, autonomia e recursos reais para viver com
+                mais equilíbrio e propósito.
+              </p>
+            </div>
           </div>
           <div className="mt-7 flex flex-wrap items-center gap-3">
             <span className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-2 text-sm font-medium text-foreground">
@@ -451,20 +469,20 @@ function Specialties() {
 
 const TCC_POINTS = [
   {
-    title: "Identifica padrões",
-    desc: "Reconhece os pensamentos automáticos, crenças e comportamentos que mantêm o sofrimento emocional.",
+    title: "Compreende seus pensamentos",
+    desc: "Você aprende a identificar e questionar os pensamentos automáticos que alimentam a ansiedade e o autocriticismo, trocando distorções por uma leitura mais realista.",
   },
   {
-    title: "Promove mudança real",
-    desc: "Traz estratégias concretas e exercícios práticos para aplicar no dia a dia, não só conversa.",
+    title: "Regula suas emoções",
+    desc: "Desenvolve estratégias práticas para lidar com medo, tristeza, raiva e frustração, recuperando o equilíbrio emocional no dia a dia.",
   },
   {
-    title: "Baseada em evidências",
-    desc: "Uma das abordagens mais estudadas cientificamente, recomendada por diretrizes internacionais.",
+    title: "Transforma comportamentos",
+    desc: "Substitui hábitos que te paralisam por ações que te aproximam dos seus objetivos e valores, construindo mudança real e duradoura.",
   },
   {
-    title: "Foco em resultados",
-    desc: "Metas claras e acompanhamento contínuo: você percebe a evolução ao longo do processo.",
+    title: "Ferramentas práticas",
+    desc: "Sai de cada sessão com exercícios concretos para aplicar entre os encontros, percebendo sua evolução ao longo do processo.",
   },
 ];
 
@@ -475,10 +493,10 @@ function TccSection() {
         <div className="grid gap-12 md:grid-cols-2 md:gap-16">
           <div>
             <p className="text-sm font-medium uppercase tracking-widest text-primary">
-              A Terapia Cognitivo-Comportamental
+              O que é a TCC
             </p>
             <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
-              Entenda como a TCC transforma vidas
+              A terapia que conecta pensamentos, emoções e ações
             </h2>
             <p className="mt-6 text-base leading-relaxed text-muted-foreground">
               A Terapia Cognitivo-Comportamental parte de uma ideia simples e
@@ -502,7 +520,14 @@ function TccSection() {
             </p>
           </div>
 
-          <div className="grid gap-5 sm:grid-cols-2">
+          <div className="md:pt-2">
+            <p className="text-sm font-medium uppercase tracking-widest text-primary">
+              Como pode te ajudar
+            </p>
+            <h3 className="mt-2 font-display text-2xl font-semibold tracking-tight text-foreground">
+              Benefícios práticos para o seu dia a dia
+            </h3>
+            <div className="mt-6 grid gap-5 sm:grid-cols-2">
             {TCC_POINTS.map((p) => (
               <div
                 key={p.title}
@@ -524,14 +549,15 @@ function TccSection() {
                     <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                   </svg>
                 </div>
-                <h3 className="mt-4 font-display text-lg font-semibold text-foreground">
+                <h4 className="mt-4 font-display text-lg font-semibold text-foreground">
                   {p.title}
-                </h3>
+                </h4>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                   {p.desc}
                 </p>
               </div>
             ))}
+            </div>
           </div>
 
           <SectionPhoto
