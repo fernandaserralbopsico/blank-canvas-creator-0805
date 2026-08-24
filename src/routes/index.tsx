@@ -469,20 +469,20 @@ function Specialties() {
 
 const TCC_POINTS = [
   {
-    title: "Identifica padrões",
-    desc: "Reconhece os pensamentos automáticos, crenças e comportamentos que mantêm o sofrimento emocional.",
+    title: "Compreende seus pensamentos",
+    desc: "Você aprende a identificar e questionar os pensamentos automáticos que alimentam a ansiedade e o autocriticismo, trocando distorções por uma leitura mais realista.",
   },
   {
-    title: "Promove mudança real",
-    desc: "Traz estratégias concretas e exercícios práticos para aplicar no dia a dia, não só conversa.",
+    title: "Regula suas emoções",
+    desc: "Desenvolve estratégias práticas para lidar com medo, tristeza, raiva e frustração, recuperando o equilíbrio emocional no dia a dia.",
   },
   {
-    title: "Baseada em evidências",
-    desc: "Uma das abordagens mais estudadas cientificamente, recomendada por diretrizes internacionais.",
+    title: "Transforma comportamentos",
+    desc: "Substitui hábitos que te paralisam por ações que te aproximam dos seus objetivos e valores, construindo mudança real e duradoura.",
   },
   {
-    title: "Foco em resultados",
-    desc: "Metas claras e acompanhamento contínuo: você percebe a evolução ao longo do processo.",
+    title: "Ferramentas práticas",
+    desc: "Sai de cada sessão com exercícios concretos para aplicar entre os encontros, percebendo sua evolução ao longo do processo.",
   },
 ];
 
