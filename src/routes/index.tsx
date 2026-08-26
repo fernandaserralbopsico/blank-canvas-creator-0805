@@ -8,6 +8,8 @@ import photo3Asset from "../assets/fernanda-3.jpg.asset.json";
 const portraitImg = headshotAsset.url;
 import logoAsset from "../assets/logo-fernanda.png.asset.json";
 const logoImg = logoAsset.url;
+import watermarkAsset from "../assets/marca-dagua.png.asset.json";
+const watermarkImg = watermarkAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -667,6 +669,22 @@ const FAQ_ITEMS = [
     q: "Qual o valor da consulta e como funciona o pagamento?",
     a: "Os valores e formas de pagamento são combinados no primeiro contato, com transparência. O pagamento é feito antes de cada sessão ou mensalmente, conforme o acordado.",
   },
+  {
+    q: "Preciso estar em crise para procurar terapia?",
+    a: "Não. A psicoterapia também é um espaço de prevenção, autocuidado e autoconhecimento. Muitas pessoas buscam atendimento para lidar melhor com o estresse do dia a dia, entender padrões de comportamento, tomar decisões com mais clareza ou simplesmente investir no próprio bem-estar antes que algo se torne um problema.",
+  },
+  {
+    q: "Psicólogo prescreve remédios?",
+    a: "Não. A prescrição de medicação é feita pelo psiquiatra, que é um médico. A psicóloga atua por meio da escuta, da psicoterapia e de técnicas baseadas em evidências. Quando necessário, trabalho de forma integrada com o psiquiatra, com o seu consentimento, para garantir um cuidado completo.",
+  },
+  {
+    q: "Por quanto tempo preciso fazer terapia?",
+    a: "Não existe um tempo fixo. A duração depende dos seus objetivos, da sua demanda e do seu ritmo. A TCC costuma ser uma abordagem mais estruturada e focada, com metas claras, mas o processo é sempre personalizado e revisado ao longo do trabalho, respeitando o que faz sentido para você.",
+  },
+  {
+    q: "Atende por convênio ou plano de saúde?",
+    a: "O atendimento é particular. Receitamos um documento de pagamento que pode ser usado para reembolso junto ao seu plano de saúde, conforme as regras do seu convênio. Vale a pena confirmar com a operadora a cobertura do reembolso de sessões de psicologia.",
+  },
 ];
 
 function Faq() {
@@ -891,16 +909,146 @@ function WhatsAppFloat() {
   );
 }
 
+const INDICATIONS = [
+  {
+    title: "Ansiedade e preocupação constante",
+    desc: "Preocupação excessiva, tensão corporal, antecipação de cenários catastróficos e dificuldade para relaxar.",
+  },
+  {
+    title: "Tristeza e desânimo",
+    desc: "Humor baixo persistente, perda de interesse em atividades antes prazerosas e sensação de vazio.",
+  },
+  {
+    title: "Baixa autoestima",
+    desc: "Autocrítica severa, sensação de insuficiência e comparação constante com os outros.",
+  },
+  {
+    title: "Dificuldade de concentração",
+    desc: "Desatenção, esquecimentos, procrastinação e sobrecarga que atrapalham o trabalho e os estudos.",
+  },
+  {
+    title: "Pensamentos repetitivos",
+    desc: "Ruminações e ideias difíceis de controlar que geram cansaço mental e angústia.",
+  },
+  {
+    title: "Conflitos nos relacionamentos",
+    desc: "Dificuldade para lidar com emoções, comunicar necessidades e estabelecer limites saudáveis.",
+  },
+  {
+    title: "Alterações de sono e apetite",
+    desc: "Insônia, sono excessivo ou mudanças no apetite relacionadas ao equilíbrio emocional.",
+  },
+  {
+    title: "Busca por autoconhecimento",
+    desc: "Desejo de entender padrões, decidir com mais clareza e viver com mais propósito, mesmo sem estar em crise.",
+  },
+  {
+    title: "Dificuldade de adaptação",
+    desc: "Mudanças de fase, luto, separações ou transições de carreira que pedem apoio para serem enfrentadas.",
+  },
+];
+
+function Indications() {
+  return (
+    <section id="indicacoes" className="section-anchor bg-background py-24">
+      <div className="mx-auto max-w-6xl px-5 sm:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <p className="text-sm font-medium uppercase tracking-widest text-primary">
+            Quando Procurar Ajuda
+          </p>
+          <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+            Sinais de que a terapia pode te ajudar
+          </h2>
+          <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+            Você não precisa estar em crise para buscar apoio. A psicoterapia
+            também é um espaço de prevenção, cuidado e autoconhecimento. Veja
+            alguns sinais de que pode ser o momento de conversar com uma
+            psicóloga:
+          </p>
+        </div>
+
+        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {INDICATIONS.map((it) => (
+            <div
+              key={it.title}
+              className="rounded-2xl border border-border bg-card p-6 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md hover:shadow-primary/10"
+            >
+              <div className="flex items-start gap-3">
+                <div className="mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-primary/10 text-primary">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M9 12l2 2 4-4" />
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="font-display text-base font-semibold text-foreground">
+                    {it.title}
+                  </h3>
+                  <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
+                    {it.desc}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-12 rounded-3xl border border-border bg-secondary/40 p-8 text-center sm:p-10">
+          <p className="mx-auto max-w-2xl text-base leading-relaxed text-foreground">
+            Se você se identificou com algum desses sinais, saiba que buscar
+            ajuda é um ato de cuidado consigo mesmo.{" "}
+            <span className="font-semibold text-primary">
+              Você não precisa esperar a situação se agravar.
+            </span>{" "}
+            O primeiro passo é uma conversa acolhedora.
+          </p>
+          <a
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-3.5 text-base font-medium text-primary-foreground shadow-lg shadow-primary/20 transition-all hover:opacity-90"
+          >
+            Agende sua consulta
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Watermark() {
+  return (
+    <div
+      aria-hidden="true"
+      className="pointer-events-none fixed inset-0 z-40 opacity-[0.06]"
+      style={{
+        backgroundImage: `url(${watermarkImg})`,
+        backgroundRepeat: "repeat",
+        backgroundSize: "clamp(170px, 20vw, 260px) auto",
+      }}
+    />
+  );
+}
+
 function Index() {
   return (
     <div className="min-h-screen bg-background">
+      <Watermark />
       <SiteHeader />
       <main>
         <Hero />
         <About />
-
-
-
+        <Indications />
         <Specialties />
         <TccSection />
         <HowItWorks />
