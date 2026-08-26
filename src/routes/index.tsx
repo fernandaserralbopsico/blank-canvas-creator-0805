@@ -8,6 +8,8 @@ import photo3Asset from "../assets/fernanda-3.jpg.asset.json";
 const portraitImg = headshotAsset.url;
 import logoAsset from "../assets/logo-fernanda.png.asset.json";
 const logoImg = logoAsset.url;
+import watermarkAsset from "../assets/marca-dagua.png.asset.json";
+const watermarkImg = watermarkAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -666,6 +668,22 @@ const FAQ_ITEMS = [
   {
     q: "Qual o valor da consulta e como funciona o pagamento?",
     a: "Os valores e formas de pagamento são combinados no primeiro contato, com transparência. O pagamento é feito antes de cada sessão ou mensalmente, conforme o acordado.",
+  },
+  {
+    q: "Preciso estar em crise para procurar terapia?",
+    a: "Não. A psicoterapia também é um espaço de prevenção, autocuidado e autoconhecimento. Muitas pessoas buscam atendimento para lidar melhor com o estresse do dia a dia, entender padrões de comportamento, tomar decisões com mais clareza ou simplesmente investir no próprio bem-estar antes que algo se torne um problema.",
+  },
+  {
+    q: "Psicólogo prescreve remédios?",
+    a: "Não. A prescrição de medicação é feita pelo psiquiatra, que é um médico. A psicóloga atua por meio da escuta, da psicoterapia e de técnicas baseadas em evidências. Quando necessário, trabalho de forma integrada com o psiquiatra, com o seu consentimento, para garantir um cuidado completo.",
+  },
+  {
+    q: "Por quanto tempo preciso fazer terapia?",
+    a: "Não existe um tempo fixo. A duração depende dos seus objetivos, da sua demanda e do seu ritmo. A TCC costuma ser uma abordagem mais estruturada e focada, com metas claras, mas o processo é sempre personalizado e revisado ao longo do trabalho, respeitando o que faz sentido para você.",
+  },
+  {
+    q: "Atende por convênio ou plano de saúde?",
+    a: "O atendimento é particular. Receitamos um documento de pagamento que pode ser usado para reembolso junto ao seu plano de saúde, conforme as regras do seu convênio. Vale a pena confirmar com a operadora a cobertura do reembolso de sessões de psicologia.",
   },
 ];
 
