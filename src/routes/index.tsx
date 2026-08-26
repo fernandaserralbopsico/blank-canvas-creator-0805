@@ -243,13 +243,13 @@ function SectionPhoto({
 }) {
   return (
     <figure
-      className={`group mx-auto max-w-md overflow-hidden rounded-3xl border border-border bg-secondary/40 shadow-sm ${className}`}
+      className={`group mx-auto max-w-sm overflow-hidden rounded-3xl border border-border bg-secondary/40 shadow-sm sm:max-w-md ${className}`}
     >
       <img
         src={src}
         alt={alt}
         loading="lazy"
-        className="aspect-[4/5] w-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+        className="aspect-[2/3] w-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
       />
     </figure>
   );
