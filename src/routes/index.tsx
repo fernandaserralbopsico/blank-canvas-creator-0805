@@ -249,7 +249,7 @@ function SectionPhoto({
         src={src}
         alt={alt}
         loading="lazy"
-        className="h-72 w-full object-cover transition-transform duration-700 group-hover:scale-105 sm:h-96"
+        className="mx-auto h-80 w-full object-contain object-center p-3 transition-transform duration-700 group-hover:scale-105 sm:h-[30rem] sm:p-5"
       />
     </figure>
   );
