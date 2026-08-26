@@ -300,23 +300,6 @@ function AboutInner() {
               sigilo e a possibilidade de realizar terapia no conforto do seu
               espaço.
             </p>
-
-            <div className="mt-2 rounded-2xl border border-border bg-background/60 p-6">
-              <h3 className="font-display text-lg font-semibold text-foreground">
-                Como meu trabalho pode te ajudar
-              </h3>
-              <p className="mt-3 text-base leading-relaxed text-muted-foreground">
-                Minha atuação vai muito além de ouvir: juntos, vamos compreender
-                os padrões que sustentam o sofrimento emocional e desenvolver
-                ferramentas práticas para o seu dia a dia. Você ganha um espaço
-                seguro para se expressar sem julgamentos, aprende a identificar e
-                questionar pensamentos que te paralisam, fortalece a
-                autoconfiança e constrói estratégias concretas para lidar com
-                ansiedade, autoestima e TDAH. O objetivo é que você saia de cada
-                sessão com mais clareza, autonomia e recursos reais para viver com
-                mais equilíbrio e propósito.
-              </p>
-            </div>
           </div>
           <div className="mt-7 flex flex-wrap items-center gap-3">
             <span className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-4 py-2 text-sm font-medium text-foreground">
