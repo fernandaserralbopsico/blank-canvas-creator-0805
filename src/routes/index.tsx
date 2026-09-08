@@ -44,6 +44,7 @@ const NAV_ITEMS = [
   { label: "Início", href: "#inicio" },
   { label: "Sobre", href: "#sobre" },
   { label: "Abordagem", href: "#abordagem" },
+  { label: "Depoimentos", href: "#depoimentos" },
   { label: "Contato", href: "#contato" },
 ];
 
@@ -1040,6 +1041,85 @@ function Watermark() {
   );
 }
 
+const TESTIMONIALS = [
+  {
+    text: "A terapia online com a Fernanda mudou minha relação com a ansiedade. Pela primeira vez senti que alguém realmente me ouvia sem julgamentos. As técnicas da TCC me deram ferramentas concretas para os dias difíceis.",
+  },
+  {
+    text: "Sempre achei que precisava estar em crise para fazer terapia, mas descobri que o processo é muito mais que isso. Hoje me sinto mais segura, com mais clareza para tomar decisões e uma autoestima que vem se reconstruindo a cada sessão.",
+  },
+  {
+    text: "O atendimento é acolhedor, ético e muito humano. A Fernanda conduz as sessões com uma escuta delicada, mas também com objetividade. Sinto que evoluí bastante no meu TDAH e na forma como me organizo no dia a dia.",
+  },
+];
+
+function Testimonials() {
+  return (
+    <section id="depoimentos" className="section-anchor bg-secondary/40 py-24">
+      <div className="mx-auto max-w-6xl px-5 sm:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <p className="text-sm font-medium uppercase tracking-widest text-primary">
+            Depoimentos
+          </p>
+          <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+            O que dizem sobre o atendimento
+          </h2>
+          <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+            Palavras de pessoas que passaram por esse processo de cuidado e
+            transformação. Depoimentos anônimos para preservar a identidade e o
+            sigilo terapêutico.
+          </p>
+        </div>
+
+        <div className="mt-14 grid gap-7 md:grid-cols-3">
+          {TESTIMONIALS.map((t, i) => (
+            <div
+              key={i}
+              className="relative flex flex-col rounded-3xl border border-border bg-card p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/10"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="mb-5 text-primary/30"
+                aria-hidden="true"
+              >
+                <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.513 3.597-6.162 6.64-6.433.62-.056 1.16.42 1.16 1.05v.103c0 .608-.396 1.12-.864 1.344-.48.23-1.024.417-1.464.57-1.143.41-1.807 1.355-1.807 2.455 0 .63.24 1.225.677 1.685.306.32.48.768.48 1.22v.053c0 .63-.52 1.14-1.157 1.09-1.18-.09-2.22-.57-3.082-1.27zm10.5 0c-1.03-1.094-1.583-2.321-1.583-4.31 0-3.513 3.597-6.162 6.64-6.433.62-.056 1.16.42 1.16 1.05v.103c0 .608-.396 1.12-.864 1.344-.48.23-1.024.417-1.464.57-1.143.41-1.807 1.355-1.807 2.455 0 .63.24 1.225.677 1.685.306.32.48.768.48 1.22v.053c0 .63-.52 1.14-1.157 1.09-1.18-.09-2.22-.57-3.082-1.27z" />
+              </svg>
+              <p className="flex-1 text-base leading-relaxed text-foreground">
+                “{t.text}”
+              </p>
+              <div className="mt-6 flex items-center gap-3">
+                <div className="grid h-10 w-10 place-items-center rounded-full bg-primary/10 text-primary">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                    <circle cx="12" cy="7" r="4" />
+                  </svg>
+                </div>
+                <span className="text-sm font-medium text-muted-foreground">
+                  Paciente anônimo
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Index() {
   return (
     <div className="min-h-screen bg-background">
@@ -1052,6 +1132,7 @@ function Index() {
         <Specialties />
         <TccSection />
         <HowItWorks />
+        <Testimonials />
         <Faq />
         <Contact />
       </main>
