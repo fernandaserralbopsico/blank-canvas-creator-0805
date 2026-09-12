@@ -25,9 +25,9 @@ export const Route = createFileRoute("/")({
           "Psicoterapia individual online para adultos e adolescentes. Um espaço seguro de acolhimento e cuidado com a sua saúde mental.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:image", content: heroImg },
+      { property: "og:image", content: `${SITE_URL}${heroImg}` },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:image", content: heroImg },
+      { name: "twitter:image", content: `${SITE_URL}${heroImg}` },
     ],
   }),
   component: Index,
@@ -441,7 +441,7 @@ function Specialties() {
         </div>
 
         <SectionPhoto
-          src={photo1Asset.url}
+          src={photo1Img}
           alt="Fernanda Serralbo sorrindo em seu consultório com um livro nas mãos"
           className="mt-14"
         />
@@ -545,7 +545,7 @@ function TccSection() {
           </div>
 
           <SectionPhoto
-            src={photo2Asset.url}
+            src={photo2Img}
             alt="Fernanda Serralbo lendo material de estudo em Terapia Cognitivo-Comportamental"
             className="md:col-span-2"
           />
@@ -592,7 +592,7 @@ function HowItWorks() {
         </div>
 
         <SectionPhoto
-          src={photo3Asset.url}
+          src={photo3Img}
           alt="Fernanda Serralbo sentada com livro de Terapia Cognitivo-Comportamental"
           className="mt-12"
         />
