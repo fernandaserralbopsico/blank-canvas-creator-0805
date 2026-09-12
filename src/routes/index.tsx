@@ -1,15 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import heroImg from "../assets/hero.jpg";
-import headshotAsset from "../assets/fernanda-headshot.jpg.asset.json";
-import photo1Asset from "../assets/fernanda-1.jpg.asset.json";
-import photo2Asset from "../assets/fernanda-2.jpg.asset.json";
-import photo3Asset from "../assets/fernanda-3.jpg.asset.json";
-const portraitImg = headshotAsset.url;
-import logoAsset from "../assets/logo-fernanda.png.asset.json";
-const logoImg = logoAsset.url;
-import watermarkAsset from "../assets/marca-dagua.png.asset.json";
-const watermarkImg = watermarkAsset.url;
+const heroImg = "/images/hero.jpg";
+const portraitImg = "/images/fernanda-headshot.jpg";
+const photo1Img = "/images/fernanda-1.jpg";
+const photo2Img = "/images/fernanda-2.jpg";
+const photo3Img = "/images/fernanda-3.jpg";
+const logoImg = "/images/logo-fernanda.png";
+const watermarkImg = "/images/marca-dagua.png";
+const SITE_URL = "https://psifernandaserralbo.com.br";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -27,9 +25,9 @@ export const Route = createFileRoute("/")({
           "Psicoterapia individual online para adultos e adolescentes. Um espaço seguro de acolhimento e cuidado com a sua saúde mental.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:image", content: heroImg },
+      { property: "og:image", content: `${SITE_URL}${heroImg}` },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:image", content: heroImg },
+      { name: "twitter:image", content: `${SITE_URL}${heroImg}` },
     ],
   }),
   component: Index,
@@ -443,7 +441,7 @@ function Specialties() {
         </div>
 
         <SectionPhoto
-          src={photo1Asset.url}
+          src={photo1Img}
           alt="Fernanda Serralbo sorrindo em seu consultório com um livro nas mãos"
           className="mt-14"
         />
@@ -547,7 +545,7 @@ function TccSection() {
           </div>
 
           <SectionPhoto
-            src={photo2Asset.url}
+            src={photo2Img}
             alt="Fernanda Serralbo lendo material de estudo em Terapia Cognitivo-Comportamental"
             className="md:col-span-2"
           />
@@ -594,7 +592,7 @@ function HowItWorks() {
         </div>
 
         <SectionPhoto
-          src={photo3Asset.url}
+          src={photo3Img}
           alt="Fernanda Serralbo sentada com livro de Terapia Cognitivo-Comportamental"
           className="mt-12"
         />
