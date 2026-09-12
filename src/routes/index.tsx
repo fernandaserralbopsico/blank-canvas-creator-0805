@@ -1,15 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import heroImg from "../assets/hero.jpg";
-import headshotAsset from "../assets/fernanda-headshot.jpg.asset.json";
-import photo1Asset from "../assets/fernanda-1.jpg.asset.json";
-import photo2Asset from "../assets/fernanda-2.jpg.asset.json";
-import photo3Asset from "../assets/fernanda-3.jpg.asset.json";
-const portraitImg = headshotAsset.url;
-import logoAsset from "../assets/logo-fernanda.png.asset.json";
-const logoImg = logoAsset.url;
-import watermarkAsset from "../assets/marca-dagua.png.asset.json";
-const watermarkImg = watermarkAsset.url;
+const heroImg = "/images/hero.jpg";
+const portraitImg = "/images/fernanda-headshot.jpg";
+const photo1Img = "/images/fernanda-1.jpg";
+const photo2Img = "/images/fernanda-2.jpg";
+const photo3Img = "/images/fernanda-3.jpg";
+const logoImg = "/images/logo-fernanda.png";
+const watermarkImg = "/images/marca-dagua.png";
+const SITE_URL = "https://psifernandaserralbo.com.br";
 
 export const Route = createFileRoute("/")({
   head: () => ({
